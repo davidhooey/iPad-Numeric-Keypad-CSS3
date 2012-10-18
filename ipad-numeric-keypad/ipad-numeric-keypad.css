@@ -1,0 +1,191 @@
+@font-face {
+	font-family: 'iPad Numeric Keypad';
+	src: url(ipad-numeric-keypad.ttf);
+}
+
+.focused {
+	border:1px solid #cccccc;
+	-webkit-box-shadow:0 0 8px #6ca2d9;
+	utline: none;
+}
+
+.ipad-numeric-keypad-spacer {
+	visibility: hidden;
+	height: 0px;
+}
+
+#ipad-numeric-keypad {
+	position:  fixed;
+	bottom: 0px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	visibility: hidden;
+	z-index:1001;
+}
+
+#ipad-numeric-keypad ul {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	border-top:1px solid #3A3D42;
+	border-left:1px solid #3A3D42;
+	border-right:1px solid #3A3D42;
+}
+
+	#ipad-numeric-keypad ul li {
+		overflow:hidden;
+		list-style:none;
+		margin: 0;
+	}
+
+#ipad-numeric-keypad-specials {
+    
+	background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .75)));
+}
+	#ipad-numeric-keypad-specials li {
+		padding: .35em 0;
+	}
+	#ipad-numeric-keypad-specials li:first-child {
+		padding-left: .25em;
+	}
+	#ipad-numeric-keypad-specials button {
+		margin: 0;
+		
+		padding: .4em 1em .5em;
+		
+		color:#FFFFFF;
+		
+		text-decoration:none;
+		text-align:center;
+/* 		text-shadow:0 1px 1px white; */
+		font-weight:bold;
+		
+		border:0;
+		border-top:1px solid rgba(0,0,0,.15);	
+		border-bottom:1px solid rgba(255,255,255,.15);		
+		
+		background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .75)));
+		
+		border-radius:4px;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+	}
+	
+	#ipad-numeric-keypad-specials button:active {
+		background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(64, 64, 64, .5)), to(rgba(0, 0, 0, .75)));
+	}
+	#ipad-numeric-keypad-specials button.inactive {
+		color:#797979;
+	}
+
+#ipad-numeric-keypad-keys {
+	
+	background:#757D8A;
+	background-image:-moz-linear-gradient(#9098A3, #454f5d);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#9098A3), to(#454f5d));
+	
+	box-shadow:0 1px 0 rgba(255,255,255,.3) inset;
+	-moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset;
+	-webkit-box-shadow:0 1px 0 rgba(255,255,255,.3) inset;
+}
+
+	#ipad-numeric-keypad-keys li {
+		text-align:center;
+		padding: .25em;
+	}
+	
+	#ipad-numeric-keypad-keys button,
+	#ipad-numeric-keypad-keys button.specialkey:active {
+		color:#3A3D42;
+		
+		text-decoration:none;
+		text-align:center;
+		text-shadow:0 1px 1px white;
+		font-weight:bold;
+		
+		border:0;
+		border-top:1px solid rgba(255,255,255,.45);		
+		
+		background:#ECEDEF;
+		background-image:-moz-linear-gradient(#f8f8f9, #dddfe1);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#f8f8f9), to(#dddfe1));
+		
+		border-radius:4px;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		
+		box-shadow:0 1px 3px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.3);
+		-moz-box-shadow:0 1px 3px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.3);
+		-webkit-box-shadow:0 1px 3px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.3);
+	}
+	
+	#ipad-numeric-keypad-keys button {
+		display:inline-block;
+		/*width:8.6%;*/
+		width: 85px;
+		height: 50px;
+		margin:0 .25%;
+		padding:.02em 0 .03em;
+		
+		color:black;
+		
+		font-size:1.35em;
+		font-family:Helvetica, Arial, sans-serif;
+	}
+	
+	#ipad-numeric-keypad-keys button:active,
+	#ipad-numeric-keypad-keys button.space:active {
+		background-image:-moz-linear-gradient(#E2E3E4, #AAADB4);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#E2E3E4), to(#AAADB4));
+	}
+	
+	#ipad-numeric-keypad-keys button.specialkey {
+		background:#757D8A;
+		background-image:-moz-linear-gradient(#7f8792, #535b68);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#7f8792), to(#535b68));
+		
+		color:white;
+		text-shadow:0 -1px 1px rgba(0,0,0,.5);
+	}
+	
+	#ipad-numeric-keypad-keys button.space,
+	#ipad-numeric-keypad-keys button.return,
+	#ipad-numeric-keypad-keys button.numbers,
+	#ipad-numeric-keypad-keys button.international {
+/* 		font-size:1.04em; */
+		font-size:1.35em;
+		padding:.25em 0;
+	}
+	
+	#ipad-numeric-keypad-keys button.shift,
+	#ipad-numeric-keypad-keys button.international,
+	#ipad-numeric-keypad-keys button.backspace {
+		font-family:'iPad Numeric Keypad', Helvetica, sans-serif;
+	}
+	
+	#ipad-numeric-keypad-keys button.shift,
+	#ipad-numeric-keypad-keys button.backspace {
+		background-image:-moz-linear-gradient(#939ba6, #687180);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#939ba6), to(#687180));
+	}
+	
+	#ipad-numeric-keypad-keys button.prev {
+	}
+	
+	#ipad-numeric-keypad-keys button.next {
+	}
+	
+	#ipad-numeric-keypad-keys button.prev,
+	#ipad-numeric-keypad-keys button.next {
+		font-size:0.7em;
+	}
+	
+	#ipad-numeric-keypad-keys li.specialbar {
+		text-align:left;
+	}
+	
+	#ipad-numeric-keypad-keys li.specialbar button {
+		width: 64px;
+		height: 28px;
+	}
